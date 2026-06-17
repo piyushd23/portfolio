@@ -1,0 +1,8 @@
+{
+  "name": "Remix: Piyush Deshmukh Portfolio",
+  "description": "Minimal, clean and recruiter-friendly portfolio of Piyush Deshmukh, Product Designer, UX Research, and Associate Product Manager.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
