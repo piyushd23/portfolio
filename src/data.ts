@@ -214,7 +214,7 @@ export const PROJECTS: ProjectItem[] = [
       "Conversational Setup Guides: AI-powered instruction sheets helped users create logic rules without syntactical errors.",
       "Immediate Curation Preview: Displaying parser output dynamically in real-time kept configuration workflows transparent."
     ],
-    isCaseStudy: true
+    isCaseStudy: false
   }
 ];
 

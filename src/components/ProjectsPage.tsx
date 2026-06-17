@@ -14,6 +14,7 @@ import biopayLogo from "../assets/images/biopay_logo.png";
 import accentifyLogo from "../assets/images/accentify_logo.png";
 import fitlifeLogo from "../assets/images/fitlife_logo.png";
 import dynamoLogo from "../assets/images/dynamo_logo.png";
+import paymentsLogo from "../assets/images/payments_logo.png";
 
 interface ProjectsPageProps {
   onBackToHome: () => void;
@@ -103,10 +104,12 @@ export default function ProjectsPage({ onBackToHome, onSelectProject }: Projects
         );
       case "payments-app":
         return (
-          <div className="w-full bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-violet-500/5 dark:from-blue-500/20 dark:to-violet-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
-            <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-[#4B49FF]/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-              <CreditCard className="w-9 h-9 text-indigo-500" />
-            </div>
+          <div className="w-full bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px]">
+            <img 
+              src={paymentsLogo} 
+              alt={name} 
+              className="h-full w-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]" 
+            />
           </div>
         );
       case "fitlife-hub":
