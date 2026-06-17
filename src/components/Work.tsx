@@ -1,14 +1,11 @@
 import { ProjectItem } from "../types";
 import { PROJECTS } from "../data";
-import { ArrowRight, ArrowUpRight, FolderKanban, Github, Fingerprint, Activity, Sparkles, CreditCard } from "lucide-react";
+import { ArrowRight, ArrowUpRight, FolderKanban, Github } from "lucide-react";
 import { motion } from "motion/react";
 import chompLogo from "../assets/images/chomp_logo.png";
 import routewiseLogo from "../assets/images/routewise_logo.png";
 import biopayLogo from "../assets/images/biopay_logo.png";
 import accentifyLogo from "../assets/images/accentify_logo.png";
-import fitlifeLogo from "../assets/images/fitlife_logo.png";
-import dynamoLogo from "../assets/images/dynamo_logo.png";
-import paymentsLogo from "../assets/images/payments_logo.png";
 
 interface WorkProps {
   onSelectProject: (project: ProjectItem) => void;
@@ -39,9 +36,6 @@ export default function Work({ onSelectProject, onViewMore }: WorkProps) {
   const routewise = PROJECTS.find((p) => p.id === "routewise");
   const biopay = PROJECTS.find((p) => p.id === "biopay");
   const accentify = PROJECTS.find((p) => p.id === "accentify");
-  const dynamoAi = PROJECTS.find((p) => p.id === "dynamo-ai");
-  const paymentsApp = PROJECTS.find((p) => p.id === "payments-app");
-  const fitlifeHub = PROJECTS.find((p) => p.id === "fitlife-hub");
 
   return (
     <section className="py-14 sm:py-20 border-b border-[#E5E5E5] dark:border-[#222222]" id="work">
@@ -122,107 +116,7 @@ export default function Work({ onSelectProject, onViewMore }: WorkProps) {
           </motion.div>
         )}
 
-        {/* CARD 2: Payments App Design */}
-        {paymentsApp && (
-          <motion.div
-            variants={cardVariants}
-            whileHover={{ y: -4, boxShadow: "0 10px 25px -8px rgba(0,0,0,0.04)" }}
-            className="group flex flex-col md:flex-row bg-[#FAF9F6]/40 dark:bg-[#1E1E21]/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300 w-full min-h-[180px]"
-            id="project-card-payments-app"
-          >
-            {/* Visual Graphic Left: Payments App Logo Image */}
-            <div className="w-full md:w-[35%] bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none border-b md:border-b-0 md:border-r border-black/[0.03] dark:border-white/[0.04] p-4 min-h-[160px] md:min-h-0">
-              <img 
-                src={paymentsLogo} 
-                alt="Payments App Logo" 
-                className="w-full h-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]"
-              />
-            </div>
-
-            {/* Content Details Right */}
-            <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
-              <div>
-                {/* Differentiator Badge */}
-                <div className="mb-2">
-                  <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#FF4B00]/5 text-[#FF4B00] border border-[#FF4B00]/15">
-                    Product Case Study
-                  </span>
-                </div>
-                <h4 className="text-base sm:text-lg font-semibold text-[#111111] dark:text-[#FAFAFA] leading-tight mb-1">
-                  {paymentsApp.name}
-                </h4>
-                <p className="text-xs sm:text-sm text-[#6B6B6B] dark:text-[#A1A1AA] leading-relaxed font-normal">
-                  {paymentsApp.description}
-                </p>
-              </div>
-              
-              {/* Simplified CTA Buttons */}
-              <div className="flex items-center gap-3 mt-4">
-                <a
-                  href={paymentsApp.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-[#FF4B00] hover:bg-[#FF4B00]/5 border border-[#FF4B00] px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
-                >
-                  View Case Study
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* CARD 3: Fitlife Hub */}
-        {fitlifeHub && (
-          <motion.div
-            variants={cardVariants}
-            whileHover={{ y: -4, boxShadow: "0 10px 25px -8px rgba(0,0,0,0.04)" }}
-            className="group flex flex-col md:flex-row bg-[#FAF9F6]/40 dark:bg-[#1E1E21]/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300 w-full min-h-[180px]"
-            id="project-card-fitlife-hub"
-          >
-            {/* Visual Graphic Left: Fitlife Hub Logo Image */}
-            <div className="w-full md:w-[35%] bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none border-b md:border-b-0 md:border-r border-black/[0.03] dark:border-white/[0.04] p-4 min-h-[160px] md:min-h-0">
-              <img 
-                src={fitlifeLogo} 
-                alt="Fitlife Hub Logo" 
-                className="w-full h-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]"
-              />
-            </div>
-
-            {/* Content Details Right */}
-            <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
-              <div>
-                {/* Differentiator Badge */}
-                <div className="mb-2">
-                  <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#FF4B00]/5 text-[#FF4B00] border border-[#FF4B00]/15">
-                    Product Case Study
-                  </span>
-                </div>
-                <h4 className="text-base sm:text-lg font-semibold text-[#111111] dark:text-[#FAFAFA] leading-tight mb-1">
-                  {fitlifeHub.name}
-                </h4>
-                <p className="text-xs sm:text-sm text-[#6B6B6B] dark:text-[#A1A1AA] leading-relaxed font-normal">
-                  {fitlifeHub.description}
-                </p>
-              </div>
-              
-              {/* Simplified CTA Buttons */}
-              <div className="flex items-center gap-3 mt-4">
-                <a
-                  href={fitlifeHub.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-[#FF4B00] hover:bg-[#FF4B00]/5 border border-[#FF4B00] px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
-                >
-                  View Case Study
-                  <ArrowUpRight className="w-3.5 h-3.5" />
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* CARD 4: BioPay (Biometric Payment) */}
+        {/* CARD 2: BioPay (Biometric Payment) */}
         {biopay && (
           <motion.div
             variants={cardVariants}
@@ -411,71 +305,6 @@ export default function Work({ onSelectProject, onViewMore }: WorkProps) {
           </motion.div>
         )}
 
-        {/* CARD 5: Dynamo AI (AI Automation Platform) */}
-        {dynamoAi && (
-          <motion.div
-            variants={cardVariants}
-            whileHover={{ y: -4, boxShadow: "0 10px 25px -8px rgba(0,0,0,0.04)" }}
-            className="group flex flex-col md:flex-row bg-[#FAF9F6]/40 dark:bg-[#1E1E21]/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300 w-full min-h-[180px]"
-            id="project-card-dynamo-ai"
-          >
-            {/* Visual Graphic Left: Dynamo AI Logo Image */}
-            <div className="w-full md:w-[35%] bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none border-b md:border-b-0 md:border-r border-black/[0.03] dark:border-white/[0.04] p-4 min-h-[160px] md:min-h-0">
-              <img 
-                src={dynamoLogo} 
-                alt="Dynamo AI Logo" 
-                className="w-full h-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]"
-              />
-            </div>
-
-            {/* Content Details Right */}
-            <div className="p-5 sm:p-6 flex flex-col justify-between flex-1">
-              <div>
-                {/* Differentiator Badge */}
-                <div className="mb-2">
-                  <span className="text-[9px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-gray-100 dark:bg-[#252528] text-gray-600 dark:text-zinc-400 border border-gray-200/60 dark:border-zinc-850">
-                    Interactive Project
-                  </span>
-                </div>
-                <h4 className="text-base sm:text-lg font-semibold text-[#111111] dark:text-[#FAFAFA] leading-tight mb-1">
-                  {dynamoAi.name}
-                </h4>
-                <p className="text-xs sm:text-sm text-[#6B6B6B] dark:text-[#A1A1AA] leading-relaxed font-normal">
-                  {dynamoAi.description}
-                </p>
-              </div>
-              
-              {/* Simplified CTA Buttons */}
-              <div className="flex items-center gap-3 mt-4">
-                <button
-                  onClick={() => onSelectProject(dynamoAi)}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-[#FF4B00] hover:bg-[#FF4B00]/5 border border-[#FF4B00] px-3 py-1.5 rounded-lg transition-colors cursor-pointer bg-transparent"
-                >
-                  View Details
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
-                <a
-                  href={dynamoAi.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-gray-700 dark:text-zinc-300 hover:text-[#FF4B00] hover:bg-[#FF4B00]/5 border border-gray-300 dark:border-zinc-700 hover:border-[#FF4B00] px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
-                >
-                  {dynamoAi.link.includes("github.com") ? (
-                    <>
-                      <Github className="w-3.5 h-3.5" />
-                      GitHub
-                    </>
-                  ) : (
-                    <>
-                      <ArrowUpRight className="w-3.5 h-3.5" />
-                      Behance
-                    </>
-                  )}
-                </a>
-              </div>
-            </div>
-          </motion.div>
-        )}
       </motion.div>
 
       {/* View More Button */}
