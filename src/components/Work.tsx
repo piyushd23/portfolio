@@ -6,6 +6,8 @@ import chompLogo from "../assets/images/chomp_logo.png";
 import routewiseLogo from "../assets/images/routewise_logo.png";
 import biopayLogo from "../assets/images/biopay_logo.png";
 import accentifyLogo from "../assets/images/accentify_logo.png";
+import fitlifeLogo from "../assets/images/fitlife_logo.png";
+import dynamoLogo from "../assets/images/dynamo_logo.png";
 
 interface WorkProps {
   onSelectProject: (project: ProjectItem) => void;
@@ -175,11 +177,13 @@ export default function Work({ onSelectProject, onViewMore }: WorkProps) {
             className="group flex flex-col md:flex-row bg-[#FAF9F6]/40 dark:bg-[#1E1E21]/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300 w-full min-h-[180px]"
             id="project-card-fitlife-hub"
           >
-            {/* Visual Graphic Left: Fitlife Hub Gradient and Icon */}
-            <div className="w-full md:w-[35%] bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-cyan-500/5 dark:from-emerald-500/20 dark:to-cyan-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none border-b md:border-b-0 md:border-r border-black/[0.03] dark:border-white/[0.04] p-4 min-h-[160px] md:min-h-0">
-              <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-emerald-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-                <Activity className="w-9 h-9 text-emerald-500" />
-              </div>
+            {/* Visual Graphic Left: Fitlife Hub Logo Image */}
+            <div className="w-full md:w-[35%] bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none border-b md:border-b-0 md:border-r border-black/[0.03] dark:border-white/[0.04] p-4 min-h-[160px] md:min-h-0">
+              <img 
+                src={fitlifeLogo} 
+                alt="Fitlife Hub Logo" 
+                className="w-full h-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]"
+              />
             </div>
 
             {/* Content Details Right */}
@@ -394,11 +398,13 @@ export default function Work({ onSelectProject, onViewMore }: WorkProps) {
             className="group flex flex-col md:flex-row bg-[#FAF9F6]/40 dark:bg-[#1E1E21]/60 border border-zinc-200 dark:border-zinc-800 hover:border-zinc-400 dark:hover:border-zinc-700 rounded-2xl overflow-hidden transition-all duration-300 w-full min-h-[180px]"
             id="project-card-dynamo-ai"
           >
-            {/* Visual Graphic Left: Dynamo AI Gradient and Icon */}
-            <div className="w-full md:w-[35%] bg-gradient-to-br from-[#FF4B00]/10 via-[#FF8A00]/10 to-amber-500/5 dark:from-[#FF4B00]/20 dark:to-amber-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none border-b md:border-b-0 md:border-r border-black/[0.03] dark:border-white/[0.04] p-4 min-h-[160px] md:min-h-0">
-              <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-amber-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-                <Sparkles className="w-9 h-9 text-[#FF4B00]" />
-              </div>
+            {/* Visual Graphic Left: Dynamo AI Logo Image */}
+            <div className="w-full md:w-[35%] bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none border-b md:border-b-0 md:border-r border-black/[0.03] dark:border-white/[0.04] p-4 min-h-[160px] md:min-h-0">
+              <img 
+                src={dynamoLogo} 
+                alt="Dynamo AI Logo" 
+                className="w-full h-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]"
+              />
             </div>
 
             {/* Content Details Right */}

@@ -12,6 +12,8 @@ import chompLogo from "../assets/images/chomp_logo.png";
 import routewiseLogo from "../assets/images/routewise_logo.png";
 import biopayLogo from "../assets/images/biopay_logo.png";
 import accentifyLogo from "../assets/images/accentify_logo.png";
+import fitlifeLogo from "../assets/images/fitlife_logo.png";
+import dynamoLogo from "../assets/images/dynamo_logo.png";
 
 interface ProjectsPageProps {
   onBackToHome: () => void;
@@ -91,10 +93,12 @@ export default function ProjectsPage({ onBackToHome, onSelectProject }: Projects
         );
       case "dynamo-ai":
         return (
-          <div className="w-full bg-gradient-to-br from-[#FF4B00]/10 via-[#FF8A00]/10 to-amber-500/5 dark:from-[#FF4B00]/20 dark:to-amber-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
-            <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-amber-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-              <Sparkles className="w-9 h-9 text-[#FF4B00]" />
-            </div>
+          <div className="w-full bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px]">
+            <img 
+              src={dynamoLogo} 
+              alt={name} 
+              className="h-full w-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]" 
+            />
           </div>
         );
       case "payments-app":
@@ -107,10 +111,12 @@ export default function ProjectsPage({ onBackToHome, onSelectProject }: Projects
         );
       case "fitlife-hub":
         return (
-          <div className="w-full bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-cyan-500/5 dark:from-emerald-500/20 dark:to-cyan-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
-            <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-emerald-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-              <Activity className="w-9 h-9 text-emerald-500" />
-            </div>
+          <div className="w-full bg-white dark:bg-[#1C1C1E] flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px]">
+            <img 
+              src={fitlifeLogo} 
+              alt={name} 
+              className="h-full w-full object-contain max-h-[110px] scale-[1.1] transition-transform duration-300 group-hover:scale-[1.16]" 
+            />
           </div>
         );
       default:
