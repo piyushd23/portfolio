@@ -84,12 +84,7 @@ export default function Navbar({ onOpenResume, currentPage, onNavigate, isDark, 
           <button
             onClick={() => {
               setIsOpen(false);
-              if (currentPage === "home") {
-                window.scrollTo({ top: 0, behavior: "smooth" });
-                window.location.hash = "#/";
-              } else {
-                onNavigate("home");
-              }
+              onNavigate("home", "#/");
             }}
             className="text-sm font-bold tracking-[0.12em] uppercase text-[#FF4B00] dark:text-[#FF4B00] hover:opacity-80 transition-opacity cursor-pointer"
             style={{ fontFamily: "'Syne', sans-serif" }}

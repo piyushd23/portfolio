@@ -125,7 +125,17 @@ export default function App() {
       } else if (cleanHash === "#/projects") {
         setCurrentPage("projects");
       } else if (cleanHash === "#/" || cleanHash === "" || cleanHash === "#") {
-        setCurrentPage("home");
+        setCurrentPage((prev) => {
+          if (prev === "home") {
+            // Scroll back to top smoothly if already on home page
+            if (lenisRef.current) {
+              lenisRef.current.scrollTo(0, { duration: 1.2 });
+            } else {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }
+          }
+          return "home";
+        });
       } else if (cleanHash.startsWith("#/")) {
         // Fallback for any invalid slash subroutes -> redirect to Home
         window.location.hash = "#/";
