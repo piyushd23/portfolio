@@ -328,8 +328,17 @@ export default function ProjectsPage({ onBackToHome, onSelectProject }: Projects
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-gray-700 dark:text-zinc-300 hover:text-[#FF4B00] hover:bg-[#FF4B00]/5 border border-gray-300 dark:border-zinc-700 hover:border-[#FF4B00] px-3 py-1.5 rounded-lg transition-colors cursor-pointer"
                         >
-                          <Github className="w-3.5 h-3.5" />
-                          GitHub
+                          {project.link.includes("github.com") ? (
+                            <>
+                              <Github className="w-3.5 h-3.5" />
+                              GitHub
+                            </>
+                          ) : (
+                            <>
+                              <ArrowUpRight className="w-3.5 h-3.5" />
+                              Behance
+                            </>
+                          )}
                         </a>
                       </>
                     )}
