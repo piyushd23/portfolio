@@ -3,7 +3,7 @@ import { ProjectItem } from "../types";
 import { PROJECTS } from "../data";
 import { 
   ArrowLeft, Search, FolderKanban, ArrowUpRight, ArrowRight, Github, 
-  Sun, Lock, Cpu, Sparkles 
+  Sparkles, CreditCard, Activity 
 } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 
@@ -89,27 +89,27 @@ export default function ProjectsPage({ onBackToHome, onSelectProject }: Projects
             />
           </div>
         );
-      case "solarflow":
+      case "dynamo-ai":
         return (
-          <div className="w-full bg-gradient-to-br from-amber-500/10 via-orange-500/10 to-red-500/5 dark:from-amber-500/20 dark:to-red-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
-            <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-orange-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-              <Sun className="w-9 h-9 text-orange-500" />
+          <div className="w-full bg-gradient-to-br from-[#FF4B00]/10 via-[#FF8A00]/10 to-amber-500/5 dark:from-[#FF4B00]/20 dark:to-amber-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-amber-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
+              <Sparkles className="w-9 h-9 text-[#FF4B00]" />
             </div>
           </div>
         );
-      case "smartgate":
+      case "payments-app":
+        return (
+          <div className="w-full bg-gradient-to-br from-blue-500/10 via-indigo-500/10 to-violet-500/5 dark:from-blue-500/20 dark:to-violet-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
+            <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-[#4B49FF]/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
+              <CreditCard className="w-9 h-9 text-indigo-500" />
+            </div>
+          </div>
+        );
+      case "fitlife-hub":
         return (
           <div className="w-full bg-gradient-to-br from-emerald-500/10 via-teal-500/10 to-cyan-500/5 dark:from-emerald-500/20 dark:to-cyan-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
             <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-emerald-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-              <Lock className="w-9 h-9 text-emerald-500" />
-            </div>
-          </div>
-        );
-      case "quantumpulse":
-        return (
-          <div className="w-full bg-gradient-to-br from-violet-500/10 via-indigo-500/10 to-blue-500/5 dark:from-violet-500/20 dark:to-blue-500/10 flex items-center justify-center shrink-0 relative overflow-hidden select-none p-4 h-[160px] border-b border-black/[0.03] dark:border-white/[0.04]">
-            <div className="p-4 rounded-2xl bg-white dark:bg-[#1E1E21] shadow-md shadow-indigo-500/5 border border-zinc-200/50 dark:border-zinc-800 transition-transform duration-300 group-hover:scale-110">
-              <Cpu className="w-9 h-9 text-indigo-500" />
+              <Activity className="w-9 h-9 text-emerald-500" />
             </div>
           </div>
         );

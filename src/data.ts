@@ -103,6 +103,44 @@ export const PROJECTS: ProjectItem[] = [
     isCaseStudy: true
   },
   {
+    id: "payments-app",
+    name: "Payments App Design",
+    description: "Reimagined the mobile peer-to-peer (P2P) payments experience, focusing on multi-currency transfers, financial dashboards, and secure biometric authentication.",
+    longDescription: "Payments App Design is an end-to-end product design case study aiming to simplify international P2P transactions. It introduces a modular financial dashboard, custom virtual card configuration, and contextual transaction flows to eliminate user anxiety during money transfers.",
+    tags: ["UX/UI Design", "Fintech", "Mobile App Design"],
+    link: "https://www.behance.net/gallery/214443569/Payments-App-Design",
+    timeline: "6 Weeks (Winter 2025)",
+    myRole: "Product Designer",
+    toolsUsed: ["Figma", "Adobe Photoshop", "Prototyping", "User Research"],
+    challenge: "Existing banking and payment applications trigger transaction anxiety due to hidden fees, complex multi-step forms, and rigid navigation menus. Peer-to-peer transfers, especially across international currencies, suffer from high conversion dropouts.",
+    solution: "Designed a conversational-style payment flow with automatic currency conversion preview. Built a card-based home layout with rapid quick-transfer options that reduced transfer time by 50%.",
+    keyInsights: [
+      "Conversational Transaction Flow: Replacing rigid multi-field transfer forms with a step-by-step contextual prompt increased user trust and decreased error rates.",
+      "Interactive Card Controls: Letting users configure, freeze, and customize virtual cards through clean swipe gestures improved onboarding completion by 35%.",
+      "Transparent Fee Breakdowns: Displaying currency conversions, intermediary fees, and landing times explicitly on the confirmation screen minimized drop-offs."
+    ],
+    isCaseStudy: true
+  },
+  {
+    id: "fitlife-hub",
+    name: "Fitlife Hub",
+    description: "Designed a holistic health and wellness web application integrating fitness tracking, personalized workout planning, and community engagement.",
+    longDescription: "Fitlife Hub is a comprehensive wellness dashboard designed to bridge the gap between workout tracking and community support. By offering users personalized workout recommendation cards, biometric telemetry graphs, and shared motivation loops, it increases routine adherence.",
+    tags: ["Product Design", "Web Design", "UI/UX", "Figma"],
+    link: "https://www.behance.net/gallery/214445919/Fitlife-Hub",
+    timeline: "8 Weeks (Spring 2025)",
+    myRole: "UX/UI Designer",
+    toolsUsed: ["Figma", "Framer", "User Testing", "Interactive Prototyping"],
+    challenge: "Fitness platforms are often fragmented, forcing users to switch between separate apps for calorie tracking, workout logs, and social coordination. This friction leads to high churn rates, with over 60% of users stopping tracking within 30 days.",
+    solution: "Designed a centralized health dashboard featuring personalized daily planner recommendations, responsive fitness graphs, and interactive workout routines. The design focuses on clean data visualization and seamless transitions.",
+    keyInsights: [
+      "Centralized Telemetry Dashboard: Aggregating activity logs, sleep metrics, and nutrition tracking into a single unified view reduced app-switching fatigue by 45%.",
+      "Gamified Motivation Loops: Introducing social challenge cards and streaks boosted weekly user activity by 30% in mock usability tests.",
+      "Interactive Workout Cards: Step-by-step workout guides with visual timers kept users focused on their routines without distraction."
+    ],
+    isCaseStudy: true
+  },
+  {
     id: "routewise",
     name: "Routewise",
     description: "Designed a micro-transit spatial logistics map interface for route optimization, real-time fleet balancing, and dispatcher efficiency.",
@@ -160,61 +198,23 @@ export const PROJECTS: ProjectItem[] = [
     isCaseStudy: false
   },
   {
-    id: "solarflow",
-    name: "SolarFlow Audits",
-    description: "Designed solar panel configuration flows and engineered a reusable React component library, boosting design efficiency by 40%.",
-    longDescription: "SolarFlow simplifies solar energy panel planning and auditing. Built during my internship at Sustainfy Energy, it replaced cluttered spreadsheet-based layouts with a step-by-step interactive technician config system and unified component layout.",
-    tags: ["React.js", "Tailwind CSS", "Figma Design", "Accessibility"],
-    link: "https://github.com/piyushd23",
-    timeline: "8 Weeks (Summer 2024)",
-    myRole: "UI/UX Designer & Dev Intern",
-    toolsUsed: ["React.js", "Tailwind CSS", "Figma", "Storybook", "Axe Accessibility"],
-    challenge: "Technicians in the field had to fill out long, non-responsive energy forms, leading to validation errors and slow audit processing. Additionally, the development team lacked a consistent design system.",
-    solution: "I created an audit configuration portal optimized for tablet and mobile devices, focusing on accessibility (WCAG 2.1) and field readability. I also built a reusable, accessible React UI component library, reducing interface inconsistencies across separate applications.",
+    id: "dynamo-ai",
+    name: "Dynamo AI",
+    description: "Designed a conversational generative-AI document parser and workflow automation console for enterprise configurations.",
+    longDescription: "Dynamo AI is a generative-AI automation platform designed to simplify complex data extraction streams and workflow triggers. (Detailed content is being finalized and will be updated soon).",
+    tags: ["Product Design", "AI Automation", "Figma Prototyping"],
+    link: "https://behance.net/piyushdeshmukh",
+    timeline: "8 Weeks (Spring 2026)",
+    myRole: "Lead UX & Product Designer",
+    toolsUsed: ["Figma", "AI Workflows", "Miro", "User Testing"],
+    challenge: "Manual document extraction and custom workflow configuration are error-prone and have steep learning curves. The objective was to design a node-based editor that lets users build document parsing recipes without code.",
+    solution: "I designed a visual recipe builder featuring node flow charts, instant extractions preview, and natural language instruction prompts. Tested with 12 enterprise users, it cut custom pipeline setups by 50%.",
     keyInsights: [
-      "Responsive progress stepper: Splitting the form into logic clusters reduced completion time by 30%.",
-      "Unified design token standard: Storybook integration enabled 40% faster frontend parity.",
-      "WCAG AA compliance: Adding clear touch targets and high-contrast styling resolved validation speed blocks in direct sunlight."
+      "Visual Node Mapping: Representing multi-step pipelines as interactive connected blocks lowered cognitive load by 35%.",
+      "Conversational Setup Guides: AI-powered instruction sheets helped users create logic rules without syntactical errors.",
+      "Immediate Curation Preview: Displaying parser output dynamically in real-time kept configuration workflows transparent."
     ],
-    isCaseStudy: false
-  },
-  {
-    id: "smartgate",
-    name: "SmartGate Companion",
-    description: "Built a Flutter B2B security app with BLE device discovery and robust local state mechanics, improving dispatch cycles by 22%.",
-    longDescription: "SmartGate is a security and fleet companion app developed at ioGenies Solutions. It allows dispatchers and security personnel to discover local IoT gate controllers, manage secure Bluetooth handshakes, and track real-time delivery handoffs.",
-    tags: ["Flutter", "Dart", "Bluetooth BLE", "Figma"],
-    link: "https://github.com/piyushd23",
-    timeline: "16 Weeks (Winter-Spring 2025)",
-    myRole: "UI/UX & Mobile Developer Intern",
-    toolsUsed: ["Flutter", "Dart", "Figma", "BLE Protocol", "Provider (State)", "SQLite"],
-    challenge: "B2B IoT hardware devices had connection latency and frequent disconnects when communicating with standard mobile terminals, causing delivery gate check delays.",
-    solution: "I designed and built a responsive Flutter companion app with background Bluetooth scanning and a custom automatic reconnection loop. Local state synchronization using SQLite and Provider ensured offline-first reliability.",
-    keyInsights: [
-      "Auto-Reconnect Protocol: Re-designed BLE handshake mechanisms, cutting driver connection dropouts by 45%.",
-      "Interactive Console: Integrated a high-fidelity visual dashboard that highlights signal strength (RSSI) and device battery.",
-      "Security Audits: Encrypted all local state payload items, ensuring B2B compliance."
-    ],
-    isCaseStudy: false
-  },
-  {
-    id: "quantumpulse",
-    name: "Quantum Pulse Controller",
-    description: "Architected automated physical experiment instrumentation and laser-pulse configuration layouts for quantum control setups.",
-    longDescription: "Developed at I-Hub QTF, IISER Pune, the Quantum Pulse Controller acts as a user configuration terminal for microsecond-precision automated laser pulse delays, enabling quantum physics labs to run delicate experiment sweeps.",
-    tags: ["FPGA Routing", "C++", "Duralink Protocol", "UI Blueprinting"],
-    link: "https://github.com/piyushd23",
-    timeline: "12 Weeks (Winter 2025-2026)",
-    myRole: "Project Intern - Quantum Control",
-    toolsUsed: ["C++", "FPGA Layouts", "Duralink", "Qt/QML", "Python (Matplotlib)"],
-    challenge: "Physicians and researchers had to configure automated pulse sweeps using raw CLI command inputs, introducing high user-error rates and safety concerns during high-frequency sweeps.",
-    solution: "I blueprinted and built a clean interactive experiment layout interface in Qt/QML, integrating backend controls via the Duralink protocol. I also optimized FPGA hardware delay routes, eliminating microsecond command delays.",
-    keyInsights: [
-      "Error Mitigation: Form-validation layouts blocked invalid pulse delay sequences, reducing testing hardware damage.",
-      "High-speed routing: Optimized hardware pathways to execute microsecond sweeps without delay buffers.",
-      "Visual Graphs: Added real-time wave graph render overlays representing configured pulse waves."
-    ],
-    isCaseStudy: false
+    isCaseStudy: true
   }
 ];
 
