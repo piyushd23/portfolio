@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import React, { useState, useRef } from "react";
 import { User, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 // @ts-ignore

@@ -38,7 +38,7 @@ export default function Work({ onSelectProject, onViewMore }: WorkProps) {
   const accentify = PROJECTS.find((p) => p.id === "accentify");
 
   return (
-    <section className="py-14 sm:py-20 border-b border-[#E5E5E5] dark:border-[#222222]" id="work">
+    <section className="py-14 sm:py-20" id="work">
       {/* Section label */}
       <div className="relative">
         <div className="absolute -top-[76px] sm:-top-[96px] left-0 pointer-events-none scroll-snap-target" />

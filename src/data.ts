@@ -127,7 +127,7 @@ export const PROJECTS: ProjectItem[] = [
     description: "Designed a holistic health and wellness web application integrating fitness tracking, personalized workout planning, and community engagement.",
     longDescription: "Fitlife Hub is a comprehensive wellness dashboard designed to bridge the gap between workout tracking and community support. By offering users personalized workout recommendation cards, biometric telemetry graphs, and shared motivation loops, it increases routine adherence.",
     tags: ["Product Design", "Web Design", "UI/UX", "Figma"],
-    link: "https://www.behance.net/gallery/214445919/Fitlife-Hub",
+    link: "https://fitlife-hub.netlify.app/",
     timeline: "8 Weeks (Spring 2025)",
     myRole: "UX/UI Designer",
     toolsUsed: ["Figma", "Framer", "User Testing", "Interactive Prototyping"],

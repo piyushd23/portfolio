@@ -92,7 +92,7 @@ export default function Hero({ onOpenResume, onGoToAbout }: HeroProps) {
       </div>
 
       {/* Content wrapper with z-10 to stay above the background, centered and with bottom padding to align with other sections */}
-      <div className="relative z-10 w-full max-w-[760px] mx-auto px-5 sm:px-6 flex flex-col items-start pb-24 sm:pb-32">
+      <div className="relative z-10 w-full max-w-[920px] mx-auto px-5 sm:px-6 flex flex-col items-start pb-24 sm:pb-32">
         {/* Short eyebrow label in muted text */}
         <motion.span
           variants={itemVariants}

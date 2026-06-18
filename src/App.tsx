@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Work from "./components/Work";
+import DesignShowcase from "./components/DesignShowcase";
 import Workflow from "./components/Workflow";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
@@ -231,14 +232,19 @@ export default function App() {
               />
               
               {/* Rest of the sections are contained in a centered container */}
-              <div className="max-w-[760px] mx-auto px-5 sm:px-6 relative">
+              <div className="max-w-[920px] mx-auto px-5 sm:px-6 relative">
                 <AboutSection onGoToDetailedAbout={() => navigateTo("about")} />
 
                 <Work 
                   onSelectProject={(project) => setSelectedProject(project)} 
                   onViewMore={() => navigateTo("projects")}
                 />
-                
+              </div>
+
+              {/* Design Showcase Component */}
+              <DesignShowcase />
+
+              <div className="max-w-[920px] mx-auto px-5 sm:px-6 relative">
                 <Workflow />
                 
                 <Experience />
@@ -251,14 +257,14 @@ export default function App() {
               </div>
             </motion.div>
           ) : currentPage === "about" ? (
-            <div key="about-page-wrapper" className="w-full max-w-[760px] mx-auto px-5 sm:px-6 relative">
+            <div key="about-page-wrapper" className="w-full max-w-[920px] mx-auto px-5 sm:px-6 relative">
               <About
                 onBackToPortfolio={(anchor) => navigateTo("home", anchor)}
                 onOpenResume={handleOpenResume}
               />
             </div>
           ) : (
-            <div key="projects-page-wrapper" className="w-full max-w-[760px] mx-auto px-5 sm:px-6 relative">
+            <div key="projects-page-wrapper" className="w-full max-w-[920px] mx-auto px-5 sm:px-6 relative">
               <ProjectsPage
                 onBackToHome={() => navigateTo("home", "#work")}
                 onSelectProject={(project) => setSelectedProject(project)}

@@ -70,7 +70,7 @@ export default function Navbar({ onOpenResume, currentPage, onNavigate, isDark, 
   return (
     <nav
       id="main-nav"
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-300 w-[calc(100%-1.5rem)] sm:w-[calc(100%-2.5rem)] max-w-[720px] rounded-2xl border backdrop-blur-xl ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-40 transition-all duration-300 w-[calc(100%-1.5rem)] sm:w-[calc(100%-2.5rem)] max-w-[860px] rounded-2xl border backdrop-blur-xl ${
         isScrolled
           ? "bg-white/[0.35] dark:bg-[#161618]/35 border-black/[0.06] dark:border-white/[0.08] py-2.5 sm:py-3 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.25)]"
           : "bg-white/[0.15] dark:bg-[#161618]/15 border-black/[0.03] dark:border-white/[0.04] py-3.5 sm:py-4 shadow-3xs"

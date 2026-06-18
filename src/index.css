@@ -11,7 +11,7 @@
     position: relative;
     display: inline-block;
   }
-  
+
   .animate-underline::after {
     content: '';
     position: absolute;
@@ -34,33 +34,44 @@
 
 /* Floating mesh blobs for Hero background */
 @keyframes float-blob-1 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0px, 0px) scale(1);
   }
+
   33% {
     transform: translate(40px, -60px) scale(1.15);
   }
+
   66% {
     transform: translate(-20px, 30px) scale(0.9);
   }
 }
 
 @keyframes float-blob-2 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0px, 0px) scale(1.05);
   }
+
   50% {
     transform: translate(-50px, 40px) scale(1.2);
   }
 }
 
 @keyframes float-blob-3 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translate(0px, 0px) scale(0.9);
   }
+
   33% {
     transform: translate(-20px, -40px) scale(0.85);
   }
+
   66% {
     transform: translate(45px, 25px) scale(1.1);
   }
@@ -78,10 +89,16 @@
   animation: float-blob-3 35s infinite ease-in-out;
 }
 
-/* Clean, crisp layout standards */
 html {
+  font-size: 17px;
   background-color: #FFFFFF;
   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@media (min-width: 640px) {
+  html {
+    font-size: 18px;
+  }
 }
 
 html.dark {
@@ -106,6 +123,7 @@ html.dark body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -114,13 +132,16 @@ html.dark body {
 .custom-scrollbar::-webkit-scrollbar {
   height: 5px;
 }
+
 .custom-scrollbar::-webkit-scrollbar-track {
   background: transparent;
 }
+
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #E5E5E5;
   border-radius: 999px;
 }
+
 .dark .custom-scrollbar::-webkit-scrollbar-thumb {
   background: #2D2D30;
 }
@@ -131,14 +152,17 @@ html.dark body {
     opacity: 0;
     transform: translate(-50%, 0);
   }
+
   20% {
     opacity: 1;
     transform: translate(-50%, 0);
   }
+
   80% {
     opacity: 0;
     transform: translate(-50%, 8px);
   }
+
   100% {
     opacity: 0;
     transform: translate(-50%, 0);
@@ -150,9 +174,12 @@ html.dark body {
 }
 
 @keyframes slow-bob {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(6px);
   }
@@ -163,7 +190,8 @@ html.dark body {
 }
 
 /* Lenis smooth scrolling compatibility rules */
-html.lenis, html.lenis body {
+html.lenis,
+html.lenis body {
   height: auto;
 }
 
@@ -183,3 +211,23 @@ html.lenis, html.lenis body {
   pointer-events: none;
 }
 
+/* Infinite Horizontal Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
+
+.animate-marquee-track:hover {
+  animation-play-state: paused;
+}
