@@ -4,7 +4,6 @@ import img1 from "../assets/images/design_work_1.png";
 import img2 from "../assets/images/design_work_2.png";
 import img3 from "../assets/images/design_work_3.png";
 import img4 from "../assets/images/design_work_4.jpg";
-import img5 from "../assets/images/design_work_5.png";
 import img6 from "../assets/images/design_work_6.png";
 
 // Exact dimensions of the user-provided images to preserve aspect ratio pixel-perfectly
@@ -13,7 +12,6 @@ const IMAGES_DATA = [
   { image: img2, aspect: "1024 / 533" },
   { image: img3, aspect: "1024 / 531" },
   { image: img4, aspect: "1024 / 640" },
-  { image: img5, aspect: "1024 / 563" },
   { image: img6, aspect: "1024 / 603" }
 ];
 
